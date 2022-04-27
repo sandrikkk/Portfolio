@@ -62,7 +62,7 @@
           <div class="row masonry">
             {% for program in programs %}
             <!-- portfolio item -->
-            <a href="{% url 'programs_detail' program.slug %}" class="col-xl-4 col-lg-6 col-md-6 grid-item photography">
+            <a href=" {{program.get_url}} " class="col-xl-4 col-lg-6 col-md-6 grid-item photography">
               <div class="work-holder scale-animation"  data-duration="2" data-delay=".3">
               <figure class="portfolio-item">
                 <img src=" {{program.image.url}} " alt="">
