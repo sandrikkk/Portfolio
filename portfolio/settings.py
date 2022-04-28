@@ -29,10 +29,7 @@ SECRET_KEY = 'django-insecure-@cwer8&07%p_cdlige))6$gn%fxz3#+#o!yrq6nfw#lrgcrwfk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '127.0.0.1'
-    'sandrosportfolio.herokuapp.com'
-]
+ALLOWED_HOSTS = ['']
 
 
 # Application definition
@@ -52,7 +49,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -134,11 +130,6 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     "resumeapp/static"
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
 
 MEDIA_ROOT = BASE_DIR / "uploads"
 MEDIA_URL = "/media/"
